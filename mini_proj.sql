@@ -1,6 +1,6 @@
 -- creating videos table
 -- table has an unique ID, the title of the video, the length in minutes, and the URL.
-CREATE TABLE videos (
+CREATE TABLE public.videos (
 video_id integer UNIQUE NOT NULL,
 title VARCHAR(255) NOT NULL,
 length integer,
@@ -20,7 +20,7 @@ SELECT * FROM videos;
 -- creating reviewers table
 -- should include user’s name (“Asher”, “John”, etc.), rating (which could be NULL, or a number between 0 and 5), and a short text review and ID column 
 -- resource used: https://www.w3schools.com/sql/sql_check.asp
-CREATE TABLE reviewers (
+CREATE TABLE public.reviewers (
 video_id integer UNIQUE NOT NULL,
 user_name VARCHAR(255) NOT NULL,
 rating integer,
