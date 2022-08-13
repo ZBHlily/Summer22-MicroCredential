@@ -144,13 +144,13 @@ WHERE created_at > '2010-01-01';
 
 -- categorizes each purchase based on it’s coast
 SELECT state,
-CASE 
-	WHEN (state = 'NY') THEN 'West Coast'
-	WHEN (state = 'AZ') THEN 'West Coast'
-	WHEN (state = 'AL') THEN 'South East'
-	WHEN (state = 'MD') THEN 'East Coast'
-	WHEN (state = 'AK') THEN 'North West'
-ELSE 'Other'
+	CASE 
+		WHEN (state = 'NY') THEN 'West Coast'
+		WHEN (state = 'AZ') THEN 'West Coast'
+		WHEN (state = 'AL') THEN 'South East'
+		WHEN (state = 'MD') THEN 'East Coast'
+		WHEN (state = 'AK') THEN 'North West'
+	ELSE 'Other'
 END FROM insurance_purchases;
 
 
