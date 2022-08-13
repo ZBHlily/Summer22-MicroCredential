@@ -19,6 +19,7 @@ INSERT INTO insurance_companies VALUES(104, 'Farmers', 3212, '1934-01-13 10:03:0
 SELECT * FROM insurance_companies;
 
 
+
 -- creating users table
 CREATE TABLE public.users (
 user_id integer NOT NULL,
@@ -47,6 +48,7 @@ INSERT INTO users VALUES (20, 'felixlu@gmail.com', 'cupcake321', '2000-01-02 1:1
 SELECT * FROM users;
 
 
+
 -- creating insurance_purchases table
 CREATE TABLE public.insurance_purchases (
 purchase_id integer NOT NULL,
@@ -63,7 +65,6 @@ REFERENCES public.users(user_id) MATCH SIMPLE
    ON DELETE NO ACTION
 );
 
-
 -- populating data
 INSERT INTO insurance_purchases VALUES(500, 'Harold Blue', '123 Ronald St', 'NY', '2001-01-02 1:18:00-05', 11201, 20);
 INSERT INTO insurance_purchases VALUES(501, 'Leandra Eleutherios', '123 Ronald St', 'NY', '2002-01-02 2:18:00-05', 11101, 19);
@@ -78,6 +79,7 @@ INSERT INTO insurance_purchases VALUES(509, 'Paviel Hamid', '123 Ronald St', 'AL
 INSERT INTO insurance_purchases VALUES(510, 'Cali Gentian', '123 Ronald St', 'AK', '2011-01-02 10:18:00-05', 11278, 10);
 INSERT INTO insurance_purchases VALUES(511, 'Hari Patya', '123 Ronald St', 'NY', '2012-01-02 1:18:00-05', 11283, 9);
 INSERT INTO insurance_purchases VALUES(512, 'Antonije Hubert', '123 Ronald St', 'AZ', '2013-01-02 2:18:00-05', 11214, 8);
+
 
 
 -- creating purchase_items table
