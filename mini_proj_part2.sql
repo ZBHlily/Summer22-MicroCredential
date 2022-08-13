@@ -125,6 +125,14 @@ WHERE email LIKE '%@gmail.com')
 ORDER BY created_at;
 
 -- finds all the users' emails who made at least one purchase from the state of Arizona
+
+SELECT name, email 
+FROM users AS u 
+JOIN insurance_purchases AS ip 
+ON u.user_id = ip.user_id 
+WHERE state = 'AZ';
+
+-- this also works
 SELECT * FROM users WHERE user_id IN 
 (SELECT user_id FROM insurance_purchases WHERE state = 'AZ');
 
